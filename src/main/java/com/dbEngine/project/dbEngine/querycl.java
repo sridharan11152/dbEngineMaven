@@ -54,7 +54,7 @@ public class querycl {
 	for(int k=0;k<new_arr.length;k++)
 	{
 		basepart=basepart+new_arr[k];
-		if(new_arr[k].matches("where"))
+		if(new_arr[k+1].matches("where"))
 		break;
 		}
 	System.out.println("basepart:"+basepart);

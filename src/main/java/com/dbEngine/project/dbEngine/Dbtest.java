@@ -10,8 +10,9 @@ public class Dbtest {
 		
 		// TODO Auto-generated method stub
 		System.out.println("Enter the query:");
-	   	Scanner scanner = new Scanner(System.in);
-		qry = scanner.nextLine();
+//	   	Scanner scanner = new Scanner(System.in);
+//		qry = scanner.nextLine();
+		qry = "select id,city from ipl.csv where season > 2014";
 	    querycl obj=new querycl();
 	    spqry= obj.splqry(qry);
 		obj.extfname(spqry);
@@ -21,7 +22,7 @@ public class Dbtest {
 		obj.grpfld(spqry,qry);
 		obj.ordfld(spqry,qry);
 		obj.aggselp(spqry);
-		scanner.close();
+		//scanner.close();
 	    dataa obj2 =new dataa();
 		obj2.qry();
 	}
