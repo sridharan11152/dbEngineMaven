@@ -8,7 +8,7 @@ public class Dbtest {
 
 	public static void main(String[] args)throws Exception {
 		
-		// TODO Auto-generated method stub
+		
 		System.out.println("Enter the query:");
 //	   	Scanner scanner = new Scanner(System.in);
 //		qry = scanner.nextLine();

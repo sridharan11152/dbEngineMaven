@@ -1,5 +1,5 @@
 package com.dbEngine.project.dbEngine;
-
+import org.junit.jupiter.api.AfterEach;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -31,42 +31,52 @@ class queryclTest {
 		String file_name = obj.extfname(spl_qry);
     	assertEquals("ipl.csv",file_name,"incorrect filename");
 	     }
-    	
+	@Test	
     void test2() // To test the basepart extracting method
          {
     	String base_part = obj.splwhr(spl_qry);
     	assertEquals("select*fromipl.csv",base_part,"incorrect basepart");
     	 }
+	@Test
     void test3() // To test the filter part extracting method
         {
     	String filter_part = obj.aftwhr(spl_qry);
-    	assertEquals("season>2014andcity=Bangaloreorderbywin_by_runsgroupbyteam1",filter_part,"incorrect filterpart");
+    	assertEquals(" season > 2014 and city = Bangalore order by win_by_runs group by team1",filter_part,"incorrect filterpart");
     	} 
+	@Test
     void test4() // To check the conditions extracting method
         {
     	String []conditions= {"","","",""};
     	conditions = obj.restrictions(spl_qry,query);
-    	assertEquals("season>2014",conditions[0],"incorrect conditions");
-    	assertEquals("city=Bangalore",conditions[1],"incorrect conditions");
+    	assertEquals("season > 2014",conditions[0],"incorrect conditions");
+    	assertEquals("city = Bangalore",conditions[1],"incorrect conditions");
     	}
+	@Test
     void test5() // To check the logical operators extracting method
     	{
     	String []ops= {"","","",""};
     	ops = obj.logical_ops(spl_qry,query);
     	assertEquals("and",ops[0],"incorrect logical operators");
     	}
+	@Test
     void test6() // To check the group by field extracting method
     	{
     	String group= "";
     	group= obj.grpfld(spl_qry,query);
     	assertEquals("team1",group,"incorrect group by field");
     	}
+	@Test
     void test7() // To check the order by field extracting method
     	{
     		String order= "";
     	order= obj.ordfld(spl_qry,query);
     	assertEquals("win_by_runs",order,"incorrect order by field");
     	}
+    @AfterEach
+    void afterEach() {
+        System.out.println("After each test method");
+        
+    }
 }
     	
     	
