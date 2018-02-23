@@ -1,15 +1,20 @@
 package com.dbEngine.project.dbEngine;
-import org.junit.jupiter.api.AfterEach;
-import static org.junit.jupiter.api.Assertions.*;
 
+
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.ArrayList;
+
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 
-import com.dbEngine.project.dbEngine.querycl;
 
-import junit.framework.Assert;
+
+//annotation used to run junit test cases
 @RunWith(JUnitPlatform.class)
 
 class queryclTest {
