@@ -1,19 +1,12 @@
 package com.dbEngine.project.dbEngine;
-
-
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.ArrayList;
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
-
-
-
 //annotation used to run junit test cases
 @RunWith(JUnitPlatform.class)
 
@@ -26,7 +19,7 @@ class queryclTest {
 	@BeforeEach
 	void setUp() throws Exception 
 	     {
-		System.out.println("select * from ipl.csv where season > 2014 and city = Bangalore order by win_by_runs group by team1");
+		//System.out.println("select * from ipl.csv where season > 2014 and city = Bangalore order by win_by_runs group by team1");
 	     }
 
 	@Test
