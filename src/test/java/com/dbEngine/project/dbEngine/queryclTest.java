@@ -25,7 +25,6 @@ class queryclTest {
 	@Test
 	void test1() // To test the filename extracting method
 	     {
-		
 		String file_name = obj.extfname(spl_qry);
     	assertEquals("ipl.csv",file_name,"incorrect filename");
 	     }
@@ -66,7 +65,7 @@ class queryclTest {
 	@Test
     void test7() // To check the order by field extracting method
     	{
-    		String order= "";
+    	String order= "";
     	order= obj.ordfld(spl_qry,query);
     	assertEquals("win_by_runs",order,"incorrect order by field");
     	}

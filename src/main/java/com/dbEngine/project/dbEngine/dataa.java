@@ -183,7 +183,7 @@ import java.util.Date;
 		    	  }
 		    	  for (int j=0;j<field.length;j++)
 		    		  System.out.println(field[j]);*/
-		    	  String[] select = {"id","city"};
+		    	 
 		    	  String[] field = {"","","",""};
 		    	  String[] sign  = new String[5];
 		    	  String[] value = new String[5];
@@ -288,7 +288,7 @@ import java.util.Date;
 		    				 }
 		    	 }
 		    		}
-		    	 System.out.println(valueint_season[0]);
+		    	 //System.out.println(valueint_season[0]);
 		    	 
 		    	 //for (int i=0;i<field.length;i++)
 		    	 //{
@@ -303,6 +303,7 @@ import java.util.Date;
 		    					 for (int j=1;j<578;j++)
 		    					 {if(obj[j].id < valueint_id[i])
 		    					 {for (int l=0;l<select.length;l++) {
+		    						 //if (!(select[i].matches("")))
 		    						 switch(select[l]) {
 		    						 case "*":
 		    							 System.out.println(obj[j].id);
@@ -795,6 +796,7 @@ import java.util.Date;
 		    					 for (int j=1;j<578;j++)
 		    					 {if(obj[j].season > valueint_season[i])
 		    					 {for (int l=0;l<select.length;l++) {
+		    						 System.out.println("");
 		    						 switch(select[l]) {
 		    						 case "*":
 		    							 System.out.println(obj[j].id);
@@ -817,13 +819,13 @@ import java.util.Date;
 		    					    	  System.out.println(obj[j].umpire3);
 		    					    	  break;
 		    						 case "id":
-		    							 System.out.println(obj[j].id);
+		    							 System.out.print(obj[j].id + " ");
 		    							 break;
 		    						 case "season":
 		    							 System.out.println(obj[j].season);
 		    							 break;
 		    						 case "city":
-		    							 System.out.println(obj[j].city);
+		    							 System.out.println(obj[j].city + " ");
 		    							 break;
 		    						 case "date":
 		    							 
@@ -1481,15 +1483,3547 @@ import java.util.Date;
 		    				 break;//end of case id
 		    				 
 		    				 
-		    		 }	 
+		    		  case "city":
+	    				 switch (sign[i])
+	    				 {
+	    				 case "<":
+	    					 for (int j=1;j<578;j++)
+	    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+	    					 {for (int l=0;l<select.length;l++) {
+	    						 switch(select[l]) {
+	    						 case "*":
+	    							 System.out.println(obj[j].id);
+	    					    	  System.out.println(obj[j].season);
+	    					    	  System.out.println(obj[j].city);
+	    					    	  System.out.println(obj[j].date);
+	    					    	  System.out.println( obj[j].team1);
+	    					    	  System.out.println(obj[j].team2);
+	    					    	  System.out.println( obj[j].toss_winner);
+	    					    	  System.out.println(obj[j].toss_decision);
+	    					    	  System.out.println(obj[j].result);
+	    					    	  System.out.println(obj[j].dl_applied);
+	    					    	  System.out.println(obj[j].winner);
+	    					    	  System.out.println(obj[j].win_by_runs);
+	    					    	  System.out.println(obj[j].win_by_wickets);
+	    					    	  System.out.println(obj[j].player_of_match);
+	    					    	  System.out.println(obj[j].venue);
+	    					    	  System.out.println(obj[j].umpire1);
+	    					    	  System.out.println(obj[j].umpire2);
+	    					    	  System.out.println(obj[j].umpire3);
+	    					    	  break;
+	    						 case "id":
+	    							 System.out.println(obj[j].id);
+	    							 break;
+	    						 case "season":
+	    							 System.out.println(obj[j].season);
+	    							 break;
+	    						 case "city":
+	    							 System.out.println(obj[j].city);
+	    							 break;
+	    						 case "date":
+	    							 
+	    							 System.out.println(obj[j].date);
+	    							 break;
+	    						 case "team1":
+	    							 System.out.println( obj[j].team1);
+	    							 break;
+	    						 case "team2":
+	    							 System.out.println( obj[j].team2);
+	    							 break;
+	    						 case "toss_winner":
+	    							 System.out.println( obj[j].toss_winner);
+	    							 break;
+	    						 case "toss_decision":
+	    							 System.out.println( obj[j].toss_decision);
+	    						     break;
+	    						 case "result":
+	    							 System.out.println( obj[j].result);
+	    							 break;
+	    						 case "dl_applied":
+	    							 System.out.println( obj[j].dl_applied);
+	    						     break;
+	    						 case "winner":
+	    							 System.out.println( obj[j].winner);
+	    							 break;
+	    						 case "win_by_runs":
+	    							 System.out.println( obj[j].win_by_runs);
+	    							 break;
+	    							 
+	    						 case "win_by_wickets":
+	    							 System.out.println( obj[j].win_by_wickets);
+	    							 break;
+	    						 case "player_of_match":
+	    							 System.out.println( obj[j].player_of_match);
+	    							 break;
+	    						 case "venue":
+	    						      System.out.println( obj[j].venue);
+	    						      break;
+	    						      
+	    						 case "umpire1":
+	    						      System.out.println( obj[j].umpire1);
+	    						      break;
+	    						 
+	    						 case "umpire2":
+	    						      System.out.println( obj[j].umpire2);
+	    						      break;
+	    							 
+	    						 case "umpire3":
+	    						      System.out.println( obj[j].umpire3);
+	    						      break;
+	    						 }	 
+	    						 
+	    							 
+	    						
+	    						 }
+	    					 }
+	    						 
+	    						 
+	    							 
+	    					 }
+	    					 
+	    					 break;
+	    				 case "=":
+	    					 for (int j=1;j<578;j++)
+	    					 {if(obj[j].city.matches(valueint_city[i]))
+	    					 {for (int l=0;l<select.length;l++) {
+	    						 switch(select[l]) {
+	    						 case "*":
+	    							 System.out.println(obj[j].id);
+	    					    	  System.out.println(obj[j].season);
+	    					    	  System.out.println(obj[j].city);
+	    					    	  System.out.println(obj[j].date);
+	    					    	  System.out.println( obj[j].team1);
+	    					    	  System.out.println(obj[j].team2);
+	    					    	  System.out.println( obj[j].toss_winner);
+	    					    	  System.out.println(obj[j].toss_decision);
+	    					    	  System.out.println(obj[j].result);
+	    					    	  System.out.println(obj[j].dl_applied);
+	    					    	  System.out.println(obj[j].winner);
+	    					    	  System.out.println(obj[j].win_by_runs);
+	    					    	  System.out.println(obj[j].win_by_wickets);
+	    					    	  System.out.println(obj[j].player_of_match);
+	    					    	  System.out.println(obj[j].venue);
+	    					    	  System.out.println(obj[j].umpire1);
+	    					    	  System.out.println(obj[j].umpire2);
+	    					    	  System.out.println(obj[j].umpire3);
+	    					    	  break;
+	    						 case "id":
+	    							 System.out.println(obj[j].id);
+	    							 break;
+	    						 case "season":
+	    							 System.out.println(obj[j].season);
+	    							 break;
+	    						 case "city":
+	    							 System.out.println(obj[j].city);
+	    							 break;
+	    						 case "date":
+	    							 
+	    							 System.out.println(obj[j].date);
+	    							 break;
+	    						 case "team1":
+	    							 System.out.println( obj[j].team1);
+	    							 break;
+	    						 case "team2":
+	    							 System.out.println( obj[j].team2);
+	    							 break;
+	    						 case "toss_winner":
+	    							 System.out.println( obj[j].toss_winner);
+	    							 break;
+	    						 case "toss_decision":
+	    							 System.out.println( obj[j].toss_decision);
+	    						     break;
+	    						 case "result":
+	    							 System.out.println( obj[j].result);
+	    							 break;
+	    						 case "dl_applied":
+	    							 System.out.println( obj[j].dl_applied);
+	    						     break;
+	    						 case "winner":
+	    							 System.out.println( obj[j].winner);
+	    							 break;
+	    						 case "win_by_runs":
+	    							 System.out.println( obj[j].win_by_runs);
+	    							 break;
+	    							 
+	    						 case "win_by_wickets":
+	    							 System.out.println( obj[j].win_by_wickets);
+	    							 break;
+	    						 case "player_of_match":
+	    							 System.out.println( obj[j].player_of_match);
+	    							 break;
+	    						 case "venue":
+	    						      System.out.println( obj[j].venue);
+	    						      break;
+	    						      
+	    						 case "umpire1":
+	    						      System.out.println( obj[j].umpire1);
+	    						      break;
+	    						 
+	    						 case "umpire2":
+	    						      System.out.println( obj[j].umpire2);
+	    						      break;
+	    							 
+	    						 case "umpire3":
+	    						      System.out.println( obj[j].umpire3);
+	    						      break;
+	    						 }	 
+	    						 
+	    							 
+	    						
+	    						 }
+	    					 }
+	    						 
+	    						 
+	    							 
+	    					 }
+	    					 
+	    					 break;
+	    				 case ">":
+	    					 for (int j=1;j<578;j++)
+	    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+	    					 {for (int l=0;l<select.length;l++) {
+	    						 switch(select[l]) {
+	    						 case "*":
+	    							 System.out.println(obj[j].id);
+	    					    	  System.out.println(obj[j].season);
+	    					    	  System.out.println(obj[j].city);
+	    					    	  System.out.println(obj[j].date);
+	    					    	  System.out.println( obj[j].team1);
+	    					    	  System.out.println(obj[j].team2);
+	    					    	  System.out.println( obj[j].toss_winner);
+	    					    	  System.out.println(obj[j].toss_decision);
+	    					    	  System.out.println(obj[j].result);
+	    					    	  System.out.println(obj[j].dl_applied);
+	    					    	  System.out.println(obj[j].winner);
+	    					    	  System.out.println(obj[j].win_by_runs);
+	    					    	  System.out.println(obj[j].win_by_wickets);
+	    					    	  System.out.println(obj[j].player_of_match);
+	    					    	  System.out.println(obj[j].venue);
+	    					    	  System.out.println(obj[j].umpire1);
+	    					    	  System.out.println(obj[j].umpire2);
+	    					    	  System.out.println(obj[j].umpire3);
+	    					    	  break;
+	    						 case "id":
+	    							 System.out.println(obj[j].id);
+	    							 break;
+	    						 case "season":
+	    							 System.out.println(obj[j].season);
+	    							 break;
+	    						 case "city":
+	    							 System.out.println(obj[j].city);
+	    							 break;
+	    						 case "date":
+	    							 
+	    							 System.out.println(obj[j].date);
+	    							 break;
+	    						 case "team1":
+	    							 System.out.println( obj[j].team1);
+	    							 break;
+	    						 case "team2":
+	    							 System.out.println( obj[j].team2);
+	    							 break;
+	    						 case "toss_winner":
+	    							 System.out.println( obj[j].toss_winner);
+	    							 break;
+	    						 case "toss_decision":
+	    							 System.out.println( obj[j].toss_decision);
+	    						     break;
+	    						 case "result":
+	    							 System.out.println( obj[j].result);
+	    							 break;
+	    						 case "dl_applied":
+	    							 System.out.println( obj[j].dl_applied);
+	    						     break;
+	    						 case "winner":
+	    							 System.out.println( obj[j].winner);
+	    							 break;
+	    						 case "win_by_runs":
+	    							 System.out.println( obj[j].win_by_runs);
+	    							 break;
+	    							 
+	    						 case "win_by_wickets":
+	    							 System.out.println( obj[j].win_by_wickets);
+	    							 break;
+	    						 case "player_of_match":
+	    							 System.out.println( obj[j].player_of_match);
+	    							 break;
+	    						 case "venue":
+	    						      System.out.println( obj[j].venue);
+	    						      break;
+	    						      
+	    						 case "umpire1":
+	    						      System.out.println( obj[j].umpire1);
+	    						      break;
+	    						 
+	    						 case "umpire2":
+	    						      System.out.println( obj[j].umpire2);
+	    						      break;
+	    							 
+	    						 case "umpire3":
+	    						      System.out.println( obj[j].umpire3);
+	    						      break;
+	    						 }	 
+	    						 
+	    							 
+	    						
+	    						 }
+	    					 }
+	    						 
+	    						 
+	    							 
+	    					 }
+	    					 
+	    					 break;
+	    					 
+	    					 }
+	    				 break;//end of case id
+		    		  case "team1":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].team1.matches(valueint_team1[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "team2":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].team2.matches(valueint_team2[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "toss_winner":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].toss_winner.matches(valueint_toss_winner[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "toss_decision":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].toss_decision.matches(valueint_toss_decision[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "result":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].result.matches(valueint_result[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "winner":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].winner.matches(valueint_winner[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "player_of_match":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].player_of_match.matches(valueint_player_of_match[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "venue":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].venue.matches(valueint_venue[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "umpire1":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].umpire1.matches(valueint_umpire1[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "umpire2":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].umpire2.matches(valueint_umpire2[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    		  case "umpire3":
+		    				 switch (sign[i])
+		    				 {
+		    				 case "<":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets < valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case "=":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].umpire3.matches(valueint_umpire3[i]))
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    				 case ">":
+		    					 for (int j=1;j<578;j++)
+		    					 {if(obj[j].win_by_wickets > valueint_win_by_wickets[i])
+		    					 {for (int l=0;l<select.length;l++) {
+		    						 switch(select[l]) {
+		    						 case "*":
+		    							 System.out.println(obj[j].id);
+		    					    	  System.out.println(obj[j].season);
+		    					    	  System.out.println(obj[j].city);
+		    					    	  System.out.println(obj[j].date);
+		    					    	  System.out.println( obj[j].team1);
+		    					    	  System.out.println(obj[j].team2);
+		    					    	  System.out.println( obj[j].toss_winner);
+		    					    	  System.out.println(obj[j].toss_decision);
+		    					    	  System.out.println(obj[j].result);
+		    					    	  System.out.println(obj[j].dl_applied);
+		    					    	  System.out.println(obj[j].winner);
+		    					    	  System.out.println(obj[j].win_by_runs);
+		    					    	  System.out.println(obj[j].win_by_wickets);
+		    					    	  System.out.println(obj[j].player_of_match);
+		    					    	  System.out.println(obj[j].venue);
+		    					    	  System.out.println(obj[j].umpire1);
+		    					    	  System.out.println(obj[j].umpire2);
+		    					    	  System.out.println(obj[j].umpire3);
+		    					    	  break;
+		    						 case "id":
+		    							 System.out.println(obj[j].id);
+		    							 break;
+		    						 case "season":
+		    							 System.out.println(obj[j].season);
+		    							 break;
+		    						 case "city":
+		    							 System.out.println(obj[j].city);
+		    							 break;
+		    						 case "date":
+		    							 
+		    							 System.out.println(obj[j].date);
+		    							 break;
+		    						 case "team1":
+		    							 System.out.println( obj[j].team1);
+		    							 break;
+		    						 case "team2":
+		    							 System.out.println( obj[j].team2);
+		    							 break;
+		    						 case "toss_winner":
+		    							 System.out.println( obj[j].toss_winner);
+		    							 break;
+		    						 case "toss_decision":
+		    							 System.out.println( obj[j].toss_decision);
+		    						     break;
+		    						 case "result":
+		    							 System.out.println( obj[j].result);
+		    							 break;
+		    						 case "dl_applied":
+		    							 System.out.println( obj[j].dl_applied);
+		    						     break;
+		    						 case "winner":
+		    							 System.out.println( obj[j].winner);
+		    							 break;
+		    						 case "win_by_runs":
+		    							 System.out.println( obj[j].win_by_runs);
+		    							 break;
+		    							 
+		    						 case "win_by_wickets":
+		    							 System.out.println( obj[j].win_by_wickets);
+		    							 break;
+		    						 case "player_of_match":
+		    							 System.out.println( obj[j].player_of_match);
+		    							 break;
+		    						 case "venue":
+		    						      System.out.println( obj[j].venue);
+		    						      break;
+		    						      
+		    						 case "umpire1":
+		    						      System.out.println( obj[j].umpire1);
+		    						      break;
+		    						 
+		    						 case "umpire2":
+		    						      System.out.println( obj[j].umpire2);
+		    						      break;
+		    							 
+		    						 case "umpire3":
+		    						      System.out.println( obj[j].umpire3);
+		    						      break;
+		    						 }	 
+		    						 
+		    							 
+		    						
+		    						 }
+		    					 }
+		    						 
+		    						 
+		    							 
+		    					 }
+		    					 
+		    					 break;
+		    					 
+		    					 }
+		    				 break;//end of case id
+		    }
+		    			 
+		    }
+		}
+		
 		    				 
 		    				 
-		    				 
+		    
 		//}
 		    
 		//}
-		    }
-		}
+		   
+		
 
 
 	
